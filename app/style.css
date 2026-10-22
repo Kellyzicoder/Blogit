@@ -1278,25 +1278,36 @@ a.btn, a.btn2, a.btn3, a.btn4 {
 @media (max-width: 768px) {
   /* Top bar */
   #navbar {
-    padding: 0.6rem 1rem;
-    flex-wrap: wrap;
+    padding: 0.6rem 0.75rem;
     gap: 0.5rem;
   }
   .nav-logo h1 {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
+    white-space: nowrap;
   }
   #navbar #nav-menu {
-    flex-wrap: wrap;
-    gap: 0.5rem;
+    justify-content: flex-end;
+    gap: 12px;
+    font-size: 0.9rem;
   }
-  #navbar #nav-menu a {
-    margin: 0 0.4rem;
+  #navbar #nav-menu a,
+  #navbar #nav-menu form {
+    margin: 0;
+    white-space: nowrap;
+  }
+  #navbar #nav-menu .btn {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+  .LogInOut {
+    gap: 10px;
+  }
+  .navloggedIn {
+    margin: 0;
+    font-size: 0.9rem;
   }
   .btn, .btn2, .btn3, .btn4 {
     padding: 10px 16px;
-  }
-  .navloggedIn {
-    margin: 0 0.8rem 0 0.4rem;
   }
 
   /* Home page */
