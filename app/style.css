@@ -1264,3 +1264,288 @@ fieldset {
 .previewinfo, .publishedinfo .publishedinfo {
   white-space: pre-wrap;
 }
+
+/* Buttons that are links (View Entries, Preview, Cancel) should not be underlined */
+a.btn, a.btn2, a.btn3, a.btn4 {
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* ============================================================
+   Phone and small tablet layout (screens 768px wide or less).
+   Desktop is not changed by anything below.
+   ============================================================ */
+@media (max-width: 768px) {
+  /* Top bar */
+  #navbar {
+    padding: 0.6rem 1rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .nav-logo h1 {
+    font-size: 1.6rem;
+  }
+  #navbar #nav-menu {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  #navbar #nav-menu a {
+    margin: 0 0.4rem;
+  }
+  .btn, .btn2, .btn3, .btn4 {
+    padding: 10px 16px;
+  }
+  .navloggedIn {
+    margin: 0 0.8rem 0 0.4rem;
+  }
+
+  /* Home page */
+  #showcase .showcase-container {
+    height: auto;
+    min-height: 60vh;
+  }
+  .showcase-content {
+    padding: 2rem 1.25rem;
+    margin-left: 0;
+  }
+  .l-heading {
+    font-size: 3.4rem;
+  }
+  .container2 {
+    padding: 0 1rem;
+  }
+  #about-us {
+    padding: 2rem 0;
+    line-height: 1.6;
+  }
+  #about-us p {
+    font-size: 1.05rem;
+  }
+  .testimonials {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .box img {
+    width: 55%;
+  }
+  .howworks {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .howworks .works-content-2 {
+    width: 100%;
+  }
+  .works-box {
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+  .works-box img {
+    width: 56px;
+    flex-shrink: 0;
+  }
+  .works-box p {
+    font-size: 1rem;
+  }
+  .privacy {
+    margin: 2rem 0;
+    line-height: 1.7;
+  }
+
+  /* Login, signup and account forms */
+  .outer-container {
+    height: auto;
+    min-height: 80vh;
+    padding: 2rem 0;
+  }
+  .outer-container .container {
+    width: 100%;
+    max-width: 400px;
+    padding: 0 1.25rem 1.5rem;
+  }
+
+  /* Logged-in pages: menu goes on top instead of on the left */
+  .container1 {
+    display: block;
+    height: auto;
+    min-height: 100vh;
+  }
+  .container1 .left-navigations {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.75rem 1rem;
+    font-size: 16px;
+  }
+  .composeblog {
+    width: 100%;
+    margin: 0 0 0.5rem 0;
+  }
+  .left-navigations a,
+  .left-navigations a:not(.current):hover {
+    padding: 8px 12px;
+    border-radius: var(--border-radius-2);
+  }
+  .container1 .left-navigations a i {
+    padding-right: 6px;
+  }
+  .main-content {
+    margin: 0 0.5rem 1rem;
+    border-radius: 16px;
+  }
+  .content {
+    margin: 0 1rem 3rem;
+  }
+  .name {
+    padding: 1.25rem 0;
+    flex-wrap: wrap;
+  }
+  .name h1 {
+    font-size: 1.5rem;
+  }
+
+  /* Topic, entry and user rows: show everything, no hover needed on phones */
+  .displayblogdetails,
+  .displayentrydetails {
+    padding: 12px 14px;
+    align-items: center;
+    gap: 6px;
+  }
+  .displayblogdetails form:first-child,
+  .displayentrydetails form:first-child {
+    flex: 1 1 100%;
+  }
+  .displayblogdetails form:first-child input,
+  .displayentrydetails form:first-child input {
+    width: 100%;
+  }
+  .displayblogdetails form:first-child .inputname,
+  .displayentrydetails form:first-child .entname {
+    padding-right: 0;
+  }
+  .displayblogdetails form:first-child .inputdate,
+  .displayblogdetails form:first-child .userdate,
+  .displayblogdetails form:first-child .inputstatus,
+  .displayentrydetails form:first-child .entdate,
+  .statustypered,
+  .statustypeblue {
+    position: static;
+    margin: 0;
+    font-size: 0.8rem;
+  }
+  .displayblogdetails:hover form:first-child .inputdate,
+  .displayblogdetails:hover form:first-child .userdate,
+  .displayblogdetails:hover form:first-child .inputstatus,
+  .displayentrydetails:hover form:first-child .entdate,
+  .displayentrydetails:hover form:first-child .statustypered,
+  .displayentrydetails:hover form:first-child .statustypeblue {
+    visibility: visible;
+  }
+  .displayblogdetails form:nth-child(2),
+  .displayblogdetails form:nth-child(3),
+  .displayblogdetails form:last-child,
+  .displayentrydetails form:nth-child(2),
+  .displayentrydetails form:nth-child(3),
+  .displayentrydetails form:last-child {
+    visibility: visible;
+    flex: 0 0 auto;
+    padding: 0.25rem 0.5rem;
+  }
+  .displayblogdetails form:last-child,
+  .displayentrydetails form:last-child {
+    margin-left: auto;
+  }
+  #add-entry {
+    margin: 2rem 0;
+  }
+
+  /* Pop-ups: compose topic, delete, change password */
+  .modal-content,
+  .deletingblogcontent,
+  .modalcontentpassword {
+    width: auto;
+    left: 1rem;
+    right: 1rem;
+    top: 12%;
+    padding: 1.25rem;
+  }
+  .deletingblogcontent div:last-child {
+    padding: 10px 0 0;
+  }
+  .groupnamedate {
+    flex-direction: column;
+  }
+  .groupnamedate div:first-child {
+    margin-right: 0;
+  }
+  .blog-heading,
+  .blogupdate {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .status-type label {
+    width: auto;
+  }
+
+  /* New / edit entry and Community pages */
+  .container3,
+  .container4 {
+    padding: 1.25rem 0.75rem;
+    height: auto;
+    min-height: 100vh;
+  }
+  .container3 .container2 {
+    padding: 0;
+  }
+  .entry-heading {
+    padding: 16px;
+    gap: 8px;
+  }
+  .entryupdate {
+    padding: 0 16px 16px;
+  }
+  .buttonnav {
+    position: static;
+    display: flex;
+    gap: 8px;
+    margin: 0 0 1rem;
+  }
+  .entryupdate textarea {
+    height: 220px;
+    margin-bottom: 1rem;
+  }
+
+  /* Published posts (Community and Preview) */
+  .publishedheader {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    gap: 4px;
+    margin-bottom: 12px;
+  }
+  .topicname {
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 4px;
+  }
+  .authordate {
+    margin-left: 0;
+    flex-wrap: wrap;
+    font-size: 0.9rem;
+  }
+  .authorname {
+    margin-right: 16px;
+  }
+
+  /* Pop-up messages and empty-page picture */
+  .topentsuccess,
+  .topenterror {
+    left: 50%;
+    width: calc(100% - 2rem);
+    padding: 10px 16px;
+  }
+  .noblogentry::before {
+    left: 10%;
+    width: 80%;
+  }
+}
